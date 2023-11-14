@@ -1,6 +1,6 @@
 # Assignment #2
 
-Welcome to Assignment #2 In this assignment, you will dive deep into the world of data acquisition, data modeling, and database management. This assignment is designed to take you through the process of building a complete data pipeline. So, let's get started!
+Welcome to Assignment #2 In this assignment, you will dive deep into the world of data acquisition, data modeling, and database management. This assignment is designed to take you through the process of building a complete data collection pipeline. So, let's get started!
 
 ## Task 1: Scraper Module 🌐
 
