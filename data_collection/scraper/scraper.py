@@ -14,9 +14,8 @@ class GithubScraper:
         pass
 
     def __set_headers(self) -> None:
-        # Set request headers with authentication and user agent
+        # Set the headers for the request
         pass
-
     def __set_query(self, file_path: str) -> None:
         # Set the GraphQL query from a file
         pass

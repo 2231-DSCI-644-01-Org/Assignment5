@@ -1,5 +1,5 @@
 from model import Repo, Issue, Comment
-from scraper import GithubScraper
+from data_collection.scraper import GithubScraper
 
 class Parser:
     def __init__(self):

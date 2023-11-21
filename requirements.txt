@@ -1,0 +1,3 @@
+requests
+alembic
+faker_agent
