@@ -8,7 +8,7 @@ In this assignment, you will build a comprehensive data collection pipeline for 
 
 - **Parser Module:** Parses the JSON data obtained by the scraper, preparing it for insertion or updating into the database. Two separate classes, `parser.py` and `loader.py`, handle data parsing and validation/insertion operations.
 
-- **Database Configuration and Modeling:** Configures the database and defines SQLAlchemy models for repository information, issues, and comments. Alembic is used for database schema management, and an ER diagram is designed for a relational database structure.
+- **Database Configuration and Modeling:** Configures the database and defines SQLAlchemy models for repository information, issues, and comments. Alembic is used for database schema management.
 
 - **Database Handler:** Implements functions in `handler.py` for interacting with the database, including CRUD operations, optimized bulk inserts, and data validation before insertion.
 
@@ -60,8 +60,7 @@ Additionally, you can check this [link](https://scrapeops.io/python-web-scraping
 Visit [this link](https://docs.sqlalchemy.org/en/14/core/engines.html) for more information on database engines.
 Visit [this link](https://coderpad.io/blog/development/sqlalchemy-with-postgresql/) for more information on how to connect to a PostgreSQL database using SQLAlchemy.
 
-2. **Modeling:** Design a relational database schema for storing repository information, issues, and comments. Create an ER diagram with relevant fields.
-The submission should include the ER diagram and the database schema.
+2. **Modeling:** Design a relational database schema for storing repository information, issues, and comments.
 2. **CRUD Operations:** Include functions for inserting, updating, and querying data. As an added goal utilize bulk insert methods for optimized data insertion.
 
 3. **Optimized Insert:** Utilize bulk insert methods for optimized data insertion.
@@ -71,10 +70,9 @@ The submission should include the ER diagram and the database schema.
 
 To learn more about ORMs : https://www.fullstackpython.com/object-relational-mappers-orms.html 
 
-5. **Migration Script:** Create a migration script to generate the initial database schema.
+Alembic helps you in creating migrations for your database. Once you have your models defined, you can use alembic to create migrations for your database. Make sure to import the models in the alembic env.py file.
 
-6. **Run Migrations:** Run the alembic migrations to set up the database for your project.
-
+To learn more about alembic : https://alembic.sqlalchemy.org/en/latest/tutorial.html
 ## Task 3: Parser Module 🧙‍♂️
 
 **Objective:** Create parsers to process the data acquired from the scraper.
@@ -83,7 +81,7 @@ To learn more about ORMs : https://www.fullstackpython.com/object-relational-map
 
 2. **Parser Implementation:** Implement parsers for repositories, issues, and comments by inheriting from the `Parser` class.
 
-3. **Pagination Handling:** Handle pagination using GraphQL cursors to fetch additional data. Make use of the cursors GitHub provides to fetch all the data.
+3. **Pagination Handling:** Handle pagination using GraphQL cursors to fetch additional data. Make use of the cursors GitHub provides to fetch all the data. The parser should obtain the next cursor from the current scrapped data and pass it to the scraper to fetch the next page of data.
 
 4. **Data Preparation:** Prepare the parsed data for insertion into the database.
 
