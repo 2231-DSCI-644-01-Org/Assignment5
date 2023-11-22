@@ -49,7 +49,9 @@ Additionally, you can check this [link](https://scrapeops.io/python-web-scraping
 
 6. **Error Handling:** Implement error handling for network issues and GitHub rate limits issues. Check out the github documentation for [rate limits and info on status codes](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)
 
-7. **Pagination:** Handle pagination using GraphQL cursors to fetch additional data. Make use of the cursors GitHub provides to fetch all the data.
+7. **Pagination:** Handle pagination using GraphQL cursors to fetch additional data. Make use of the cursors GitHub provides to fetch all the data. You can refer to pagination.ipynb file for more information on how to handle pagination. This file gives a small working demo of how to handle pagination using GraphQL cursors. Use the logic as a reference and implement it in the scraper. 
+
+
 8. **Return Format:** Ensure that the scraper returns all the fetched data in a dictionary format.
 
 ## Task 2: Database Configuration and Modeling 📊
@@ -72,7 +74,7 @@ To learn more about ORMs : https://www.fullstackpython.com/object-relational-map
 
 Alembic helps you in creating migrations for your database. Once you have your models defined, you can use alembic to create migrations for your database. Make sure to import the models in the alembic env.py file.
 
-To learn more about alembic : https://alembic.sqlalchemy.org/en/latest/tutorial.html
+
 ## Task 3: Parser Module 🧙‍♂️
 
 **Objective:** Create parsers to process the data acquired from the scraper.
@@ -83,7 +85,7 @@ To learn more about alembic : https://alembic.sqlalchemy.org/en/latest/tutorial.
 
 3. **Pagination Handling:** Handle pagination using GraphQL cursors to fetch additional data. Make use of the cursors GitHub provides to fetch all the data. The parser should obtain the next cursor from the current scrapped data and pass it to the scraper to fetch the next page of data.
 
-4. **Data Preparation:** Prepare the parsed data for insertion into the database.
+4. **Data Preparation:** Prepare the parsed data for insertion into the database. Lot of time you don't need all the data that you have scrapped. You can use the parsed data to create a dictionary with only the required data and pass it to the loader. Also make sure to handle the data types of the data that you are passing to the loader. 
 
 ## Task 4: Loader Module 🛠️
 
